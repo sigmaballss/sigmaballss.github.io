@@ -27,12 +27,6 @@ jobs:
       run: |
         cd ./SigmaBallssGitHubPage.Blazor/bin/
         ls
-        cd ./SigmaBallssGitHubPage.Blazor/bin/release
-        ls
-        cd ./SigmaBallssGitHubPage.Blazor/bin/release/net9.0
-        ls
-        cd ./SigmaBallssGitHubPage.Blazor/bin/release/net9.0/wwwroot
-        ls
         sed -i 's/<base href="\/" \/>/<base href="\/sigmaballss.github.io\/" \/>/g' SigmaBallssGitHubPage.Blazor/bin/release/net9.0/wwwroot/index.html
       
     - name: Add .nojekyll file
