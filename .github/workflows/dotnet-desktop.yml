@@ -24,7 +24,9 @@ jobs:
       run: dotnet publish SigmaBallssGitHubPage.Blazor/SigmaBallssGitHubPage.Blazor.csproj -c Release --output release --nologo
 
     - name: Change base-tag in index.html from / to the necessary
-      run: sed -i 's/<base href="\/" \/>/<base href="\/sigmaballss.github.io\/" \/>/g' /SigmaBallssGitHubPage.Blazor/bin/Release/net9.0/wwwroot/index.html
+      run: |
+        ls
+        sed -i 's/<base href="\/" \/>/<base href="\/sigmaballss.github.io\/" \/>/g' /SigmaBallssGitHubPage.Blazor/bin/Release/net9.0/wwwroot/index.html
       
     - name: Add .nojekyll file
       run: touch ./SigmaBallssGitHubPage.Blazor/bin/release/net9.0/publish/wwwroot/.nojekyll
