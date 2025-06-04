@@ -25,16 +25,7 @@ jobs:
 
     - name: Debug bin/
       run: |
-       cd ./SigmaBallssGitHubPage.Blazor/bin/
-       ls
-       echo -e "Next!"
-       cd release
-       ls
-       echo -e "Next!"
-       cd net9.0
-       ls
-       echo -e "Next!"
-       cd publish
+       cd ./SigmaBallssGitHubPage.Blazor/bin/release/net9.0/publish/wwwroot/
        ls
 
     - name: Change base-tag in index.html from / to the necessary
