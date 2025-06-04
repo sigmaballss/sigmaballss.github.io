@@ -25,7 +25,7 @@ jobs:
 
     - name: Change base-tag in index.html from / to the necessary
       run: |
-        cd release
+        cd SigmaBallssGitHubPage.Blazor
         ls
         sed -i 's/<base href="\/" \/>/<base href="\/sigmaballss.github.io\/" \/>/g' /SigmaBallssGitHubPage.Blazor/bin/Release/net9.0/wwwroot/index.html
       
