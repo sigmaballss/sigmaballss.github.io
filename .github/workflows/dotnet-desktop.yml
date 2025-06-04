@@ -21,13 +21,16 @@ jobs:
         
       # генерируем статические файлы
     - name: Publish .NET Core Project
-      run: dotnet publish SigmaBallssGitHubPage.Blazor/SigmaBallssGitHubPage.Blazor.csproj -c Release --output release --nologo
+      run: dotnet publish SigmaBallssGitHubPage.Blazor/SigmaBallssGitHubPage.Blazor.csproj -c release --nologo
 
     - name: Change base-tag in index.html from / to the necessary
       run: |
-        cd SigmaBallssGitHubPage.Blazor
+        cd SigmaBallssGitHubPage.Blazor/bin/
+        cd SigmaBallssGitHubPage.Blazor/bin/release
+        cd SigmaBallssGitHubPage.Blazor/bin/release/net9.0
+        cd SigmaBallssGitHubPage.Blazor/bin/release/net9.0/wwwroot
         ls
-        sed -i 's/<base href="\/" \/>/<base href="\/sigmaballss.github.io\/" \/>/g' /release/wwwroot/index.html
+        sed -i 's/<base href="\/" \/>/<base href="\/sigmaballss.github.io\/" \/>/g' SigmaBallssGitHubPage.Blazor/bin/release/net9.0/wwwroot/index.html
       
     - name: Add .nojekyll file
       run: touch ./SigmaBallssGitHubPage.Blazor/bin/release/net9.0/publish/wwwroot/.nojekyll
