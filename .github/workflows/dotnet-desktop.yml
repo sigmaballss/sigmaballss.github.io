@@ -23,6 +23,26 @@ jobs:
     - name: Publish .NET Core Project
       run: dotnet publish SigmaBallssGitHubPage.Blazor/SigmaBallssGitHubPage.Blazor.csproj -c release --nologo
 
+    - name: Debug publish .Blazor/bin
+      run: |
+        cd ./SigmaBallssGitHubPage.Blazor/bin/
+        ls
+      
+    - name: Debug publish .Blazor/bin/release
+      run: |
+        cd ./SigmaBallssGitHubPage.Blazor/bin/release
+        ls
+        
+    - name: Debug publish .Blazor/bin/release/net.9.0
+      run: |
+        cd ./SigmaBallssGitHubPage.Blazor/bin/release/net9.0
+        ls
+        
+    - name: Debug publish .Blazor/bin/release/wwwroot
+      run: |
+        cd ./SigmaBallssGitHubPage.Blazor/bin/release/net9.0/wwwroot
+        ls
+        
     - name: Change base-tag in index.html from / to the necessary
       run: |
         cd ./SigmaBallssGitHubPage.Blazor/bin/
