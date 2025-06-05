@@ -12,7 +12,21 @@ public partial class SectionComponent : ComponentBase
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
+    public ElementReference ComponentReference { get; set; }
+
     private bool IsFocused { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender == false)
+        {
+            return;
+        }
+
+        var boundingRect = await JsRuntimeService.GetBoundingRect(ComponentReference);
+
+        Console.WriteLine($"{boundingRect.Top}, {boundingRect.Bottom}, {boundingRect.Left}, {boundingRect.Right}");
+    }
 
     protected override void OnInitialized()
     {
