@@ -7,6 +7,4 @@ window.RegisterJsRuntimeService = (jsRuntimeService) => {
     window.jsRuntimeService = jsRuntimeService;
 };
 
-window.MyDOMGetBoundingClientRect = (element) => element.getBoundingClientRect().top;
-
 window.GetElementBoundingClientRect = (element) => element.getBoundingClientRect();
