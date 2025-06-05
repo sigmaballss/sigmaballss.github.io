@@ -12,7 +12,7 @@ public partial class SectionComponent : ComponentBase
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
-    public ElementReference ComponentReference { get; set; }
+    private ElementReference ComponentReference { get; set; }
 
     private bool IsFocused { get; set; }
 
