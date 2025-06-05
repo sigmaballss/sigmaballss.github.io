@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Components;
 using R3;
 using SigmaBallssGitHubPage.Blazor.Services.Abstractions;
+using SigmaBallssGitHubPage.Blazor.Structs;
 
 namespace SigmaBallssGitHubPage.Blazor.Components;
 
-public partial class SectionComponent : ComponentBase
+public partial class SectionComponent : ComponentBase, IDisposable
 {
+    private IDisposable? _isFocusedObserver;
+
     [Inject]
     public required IJsRuntimeService JsRuntimeService { get; set; }
 
@@ -14,7 +17,14 @@ public partial class SectionComponent : ComponentBase
 
     private ElementReference ComponentReference { get; set; }
 
+    private BoundingRect BoundingRect { get; set; }
+
     private bool IsFocused { get; set; }
+
+    public void Dispose()
+    {
+        _isFocusedObserver?.Dispose();
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -23,20 +33,25 @@ public partial class SectionComponent : ComponentBase
             return;
         }
 
-        var boundingRect = await JsRuntimeService.GetBoundingRect(ComponentReference);
+        BoundingRect = await JsRuntimeService.GetBoundingRect(ComponentReference);
 
-        Console.WriteLine($"{boundingRect.Top}, {boundingRect.Bottom}, {boundingRect.Left}, {boundingRect.Right}");
-    }
-
-    protected override void OnInitialized()
-    {
-        JsRuntimeService.ScrollYValue
-            .Select(yValue => yValue < 100)
+        _isFocusedObserver = JsRuntimeService.ScrollYValue
+            .Select(IsBoundingRectInFocus)
             .Where(isFocused => IsFocused != isFocused)
             .Subscribe(isFocused =>
             {
                 IsFocused = isFocused;
                 StateHasChanged();
             });
+    }
+
+    private bool IsBoundingRectInFocus(int yValue)
+    {
+        var screenHeight = JsRuntimeService.ScreenSize.CurrentValue.Y;
+        var halfScreenHeight = screenHeight / 2;
+
+        Console.WriteLine(halfScreenHeight);
+
+        return yValue + halfScreenHeight >= BoundingRect.Top;
     }
 }
