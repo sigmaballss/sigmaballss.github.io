@@ -1,0 +1,18 @@
+.transition-all.fade-in,
+.focused-section .transition-all{
+    opacity: 100%;
+    transform: translateY(0em);
+}
+
+.transition-all.fade-out,
+* .transition-all{
+    opacity: 0%;
+    transform: translateY(2em);
+}
+
+.transition-all{
+    transition: all 0.25s;
+}
+
+.focused-section{
+}
