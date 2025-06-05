@@ -1,17 +1,28 @@
 ﻿using Microsoft.AspNetCore.Components;
+using R3;
+using SigmaBallssGitHubPage.Blazor.Services.Abstractions;
 
 namespace SigmaBallssGitHubPage.Blazor.Components;
 
 public partial class SectionComponent : ComponentBase
 {
+    [Inject]
+    public required IJsRuntimeService JsRuntimeService { get; set; }
+
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        await Task.Delay(1000);
-        SectionClass = "focused-section";
-    }
+    private bool IsFocused { get; set; }
 
-    private string SectionClass { get; set; } = string.Empty;
+    protected override void OnInitialized()
+    {
+        JsRuntimeService.ScrollYValue
+            .Select(yValue => yValue < 100)
+            .Where(isFocused => IsFocused != isFocused)
+            .Subscribe(isFocused =>
+            {
+                IsFocused = isFocused;
+                StateHasChanged();
+            });
+    }
 }
