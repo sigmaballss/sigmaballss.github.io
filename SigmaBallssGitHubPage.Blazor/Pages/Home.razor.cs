@@ -1,15 +1,14 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using R3;
+using SigmaBallssGitHubPage.Blazor.Consts;
 using SigmaBallssGitHubPage.Blazor.Services.Abstractions;
 
 namespace SigmaBallssGitHubPage.Blazor.Pages;
 
 public partial class Home : IDisposable
 {
-    private const string EnCulture = "en";
-    private const string RuCulture = "ru";
-    private string _currentCulture = EnCulture;
+    private int _cultureCounter;
     private IDisposable? _observers;
 
     [Inject]
@@ -31,10 +30,8 @@ public partial class Home : IDisposable
 
     private void ChangeLanguage_OnClick()
     {
-        _currentCulture = _currentCulture == EnCulture
-            ? RuCulture
-            : EnCulture;
+        _cultureCounter = (_cultureCounter + 1) % BlazorApplication.SupportedCultures.Length;
 
-        CultureProvider.ChangeCurrentCulture(_currentCulture);
+        CultureProvider.ChangeCurrentCulture(BlazorApplication.SupportedCultures[_cultureCounter]);
     }
 }

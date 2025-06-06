@@ -1,22 +1,26 @@
 ﻿using System.Globalization;
 using R3;
+using SigmaBallssGitHubPage.Blazor.Consts;
 using SigmaBallssGitHubPage.Blazor.Services.Abstractions;
 
 namespace SigmaBallssGitHubPage.Blazor.Services.Impl;
 
 public class CultureProvider : ICultureProvider
 {
-    private readonly ReactiveProperty<string> _currentReactiveProperty = new(CultureInfo.CurrentCulture.Name);
+    private readonly ReactiveProperty<CultureInfo> _currentCultureProperty = new(CultureInfo.CurrentCulture);
 
-    public ReadOnlyReactiveProperty<string> CurrentCulture => _currentReactiveProperty;
+    public ReadOnlyReactiveProperty<CultureInfo> CurrentCulture => _currentCultureProperty;
 
-    public void ChangeCurrentCulture(string culture)
+    public void ChangeCurrentCulture(CultureInfo culture)
     {
-        var cultureInfo = CultureInfo.CreateSpecificCulture(culture);
+        if (BlazorApplication.SupportedCultures.Contains(culture) == false)
+        {
+            throw new NotSupportedException($"Culture '{culture}' is not supported");
+        }
 
-        CultureInfo.CurrentCulture = cultureInfo;
-        CultureInfo.CurrentUICulture = cultureInfo;
+        CultureInfo.CurrentCulture = culture;
+        CultureInfo.CurrentUICulture = culture;
 
-        _currentReactiveProperty.Value = culture;
+        _currentCultureProperty.Value = culture;
     }
 }

@@ -6,7 +6,7 @@ namespace SigmaBallssGitHubPage.Common.Helpers;
 
 public static class WebAssemblyCultureResourcesHelper
 {
-    public static async Task LoadResourcesForCultures(string[] cultureNames)
+    public static async Task LoadResourcesForCultures(CultureInfo[] cultureInfos)
     {
         var cultureToRollback = CultureInfo.DefaultThreadCurrentCulture;
 
@@ -17,10 +17,8 @@ public static class WebAssemblyCultureResourcesHelper
             .GetProperty("Instance", BindingFlags.Public | BindingFlags.Static)
             ?.GetValue(null);
 
-        foreach (var cultureName in cultureNames)
+        foreach (var cultureInfo in cultureInfos)
         {
-            var cultureInfo = CultureInfo.CreateSpecificCulture(cultureName);
-
             CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
 
             await (ValueTask)webAssemblyCultureProvider!

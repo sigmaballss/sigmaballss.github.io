@@ -1,10 +1,11 @@
-﻿using R3;
+﻿using System.Globalization;
+using R3;
 
 namespace SigmaBallssGitHubPage.Blazor.Services.Abstractions;
 
 public interface ICultureProvider
 {
-    public ReadOnlyReactiveProperty<string> CurrentCulture { get; }
+    public ReadOnlyReactiveProperty<CultureInfo> CurrentCulture { get; }
 
-    public void ChangeCurrentCulture(string culture);
+    public void ChangeCurrentCulture(CultureInfo culture);
 }
