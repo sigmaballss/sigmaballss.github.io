@@ -16,3 +16,4 @@ window.RegisterJsRuntimeService = (jsRuntimeService) => {
 };
 
 window.GetElementBoundingClientRect = (element) => element.getBoundingClientRect();
+
