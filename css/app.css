@@ -2,21 +2,29 @@ body {
     margin: 0;
 }
 
-.transition-all.fade-in,
+.unfocused-selection,
+.focused-section {
+    transition: background-color 0.25s;
+}
+
+.unfocused-selection {
+    background-color: #f3f3f3
+}
+
+.focused-section {
+    background-color: #3f3f3f;
+}
+
 .focused-section .transition-all{
     opacity: 100%;
     transform: translateY(0em);
 }
 
-.transition-all.fade-out,
-* .transition-all{
-    opacity: 0%;
+.unfocused-selection .transition-all{
+    opacity: 0;
     transform: translateY(2em);
 }
 
 .transition-all{
     transition: all 0.25s;
-}
-
-.focused-section{
 }
