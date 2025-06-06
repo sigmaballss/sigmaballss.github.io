@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using SigmaBallssGitHubPage.Blazor;
@@ -8,11 +9,11 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddSingleton<IJsRuntimeService, JsRuntimeService>();
+var cultureInfo = CultureInfo.CreateSpecificCulture("ru");
 
-builder.Services.AddScoped(_ => new HttpClient
-{
-    BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
-});
+builder.Services.AddLocalization();
+
+builder.Services.AddSingleton<IJsRuntimeService, JsRuntimeService>();
+builder.Services.AddSingleton<ICultureProvider, CultureProvider>();
 
 await builder.Build().RunAsync();

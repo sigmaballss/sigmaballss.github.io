@@ -1,15 +1,21 @@
 ﻿@page "/"
+@using System.Globalization
 @using SigmaBallssGitHubPage.Blazor.Components
 
-<PageTitle>Home</PageTitle>
+<PageTitle>@CultureInfo.CurrentUICulture</PageTitle>
+
+<button @onclick="ChangeLanguage_OnClick">Change language</button>
 
 <SectionComponent>
-    <h1 class="transition-all">Hello, world!</h1>
+    <h1 class="transition-all">@PageLocalizer["Hello world"]</h1>
+    <h1 class="transition-all">@PageLocalizer["Hello world"].ResourceNotFound</h1>
 </SectionComponent>
 <SectionComponent>
-    <h1 class="transition-all">Hello, world!</h1>
+    <h1 class="transition-all">@PageLocalizer["Hello world"]</h1>
+    <h1 class="transition-all">@PageLocalizer["Hello world"].ResourceNotFound</h1>
 </SectionComponent>
 <SectionComponent>
-    <h1 class="transition-all">Hello, world!</h1>
+    <h1 class="transition-all">@PageLocalizer["Hello world"]</h1>
+    <h1 class="transition-all">@PageLocalizer["Hello world"].ResourceNotFound</h1>
 </SectionComponent>
 
