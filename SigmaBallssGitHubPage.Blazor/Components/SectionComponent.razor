@@ -1,4 +1,4 @@
-﻿<div @ref="ComponentReference" class="@(IsFocused ? "focused-section" : string.Empty)"
-     style="height: 100vh; padding: 120px; background-color: #3f3f3f">
+﻿<div @ref="ComponentReference" class="transition-all @(IsFocused ? "focused-section" : "unfocused-selection")"
+     style="height: 100vh; padding: 120px;">
     @ChildContent
 </div>

@@ -7,7 +7,7 @@ namespace SigmaBallssGitHubPage.Blazor.Components;
 
 public partial class SectionComponent : ComponentBase, IDisposable
 {
-    private IDisposable? _isFocusedObserver;
+    private IDisposable? _observers;
 
     [Inject]
     public required IJsRuntimeService JsRuntimeService { get; set; }
@@ -23,7 +23,7 @@ public partial class SectionComponent : ComponentBase, IDisposable
 
     public void Dispose()
     {
-        _isFocusedObserver?.Dispose();
+        _observers?.Dispose();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -35,23 +35,36 @@ public partial class SectionComponent : ComponentBase, IDisposable
 
         BoundingRect = await JsRuntimeService.GetBoundingRect(ComponentReference);
 
-        _isFocusedObserver = JsRuntimeService.ScrollYValue
+        var disposables = Disposable.CreateBuilder();
+
+        JsRuntimeService.ScrollYValue
             .Select(IsBoundingRectInFocus)
             .Where(isFocused => IsFocused != isFocused)
-            .Subscribe(isFocused =>
-            {
-                IsFocused = isFocused;
-                StateHasChanged();
-            });
+            .Subscribe(IsFocused_NewValueDetected)
+            .AddTo(ref disposables);
+
+        JsRuntimeService.ScreenSize
+            .Subscribe(_ => UpdateBoundingRect())
+            .AddTo(ref disposables);
+
+        _observers = disposables.Build();
     }
 
     private bool IsBoundingRectInFocus(int yValue)
     {
-        var screenHeight = JsRuntimeService.ScreenSize.CurrentValue.Y;
-        var halfScreenHeight = screenHeight / 2;
-
-        Console.WriteLine(halfScreenHeight);
+        var halfScreenHeight = JsRuntimeService.ScreenSize.CurrentValue.Y / 2;
 
         return yValue + halfScreenHeight >= BoundingRect.Top;
+    }
+
+    private void IsFocused_NewValueDetected(bool isFocused)
+    {
+        IsFocused = isFocused;
+        StateHasChanged();
+    }
+
+    private async ValueTask UpdateBoundingRect()
+    {
+        BoundingRect = await JsRuntimeService.GetBoundingRect(ComponentReference);
     }
 }
