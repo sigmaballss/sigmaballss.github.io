@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using R3;
-using SigmaBallssGitHubPage.Blazor.Services.Abstractions;
-using SigmaBallssGitHubPage.Blazor.Structs;
+using SigmaBallssGitHubPage.Common.JsRuntime.Abstractions;
+using SigmaBallssGitHubPage.Common.JsRuntime.Structs;
 
 namespace SigmaBallssGitHubPage.Blazor.Components;
 

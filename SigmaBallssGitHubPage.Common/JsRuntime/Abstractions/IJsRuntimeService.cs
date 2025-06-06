@@ -1,9 +1,9 @@
 ﻿using System.Numerics;
 using Microsoft.AspNetCore.Components;
 using R3;
-using SigmaBallssGitHubPage.Blazor.Structs;
+using SigmaBallssGitHubPage.Common.JsRuntime.Structs;
 
-namespace SigmaBallssGitHubPage.Blazor.Services.Abstractions;
+namespace SigmaBallssGitHubPage.Common.JsRuntime.Abstractions;
 
 public interface IJsRuntimeService
 {

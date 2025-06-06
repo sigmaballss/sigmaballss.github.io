@@ -1,4 +1,4 @@
-﻿namespace SigmaBallssGitHubPage.Blazor.Structs;
+﻿namespace SigmaBallssGitHubPage.Common.JsRuntime.Structs;
 
 public struct BoundingRect
 {

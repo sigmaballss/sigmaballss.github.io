@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using R3;
-using SigmaBallssGitHubPage.Blazor.Services.Abstractions;
-using SigmaBallssGitHubPage.Blazor.Structs;
+using SigmaBallssGitHubPage.Common.JsRuntime.Abstractions;
+using SigmaBallssGitHubPage.Common.JsRuntime.Structs;
 
-namespace SigmaBallssGitHubPage.Blazor.Services.Impl;
+namespace SigmaBallssGitHubPage.Common.JsRuntime.Impl;
 
 public class JsRuntimeService : IJsRuntimeService
 {

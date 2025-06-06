@@ -8,7 +8,7 @@ namespace SigmaBallssGitHubPage.Blazor.Pages;
 
 public partial class Home : IDisposable
 {
-    private int _cultureCounter;
+    private int _cultureIndexCounter;
     private IDisposable? _observers;
 
     [Inject]
@@ -30,8 +30,8 @@ public partial class Home : IDisposable
 
     private void ChangeLanguage_OnClick()
     {
-        _cultureCounter = (_cultureCounter + 1) % BlazorApplication.SupportedCultures.Length;
+        _cultureIndexCounter = (_cultureIndexCounter + 1) % BlazorApplication.SupportedCultures.Length;
 
-        CultureProvider.ChangeCurrentCulture(BlazorApplication.SupportedCultures[_cultureCounter]);
+        CultureProvider.ChangeCurrentCulture(BlazorApplication.SupportedCultures[_cultureIndexCounter]);
     }
 }

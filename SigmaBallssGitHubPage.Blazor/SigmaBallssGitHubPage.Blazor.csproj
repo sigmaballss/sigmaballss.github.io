@@ -99,4 +99,10 @@
       </EmbeddedResource>
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Update="wwwroot\js\jsRuntimeService.js">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>

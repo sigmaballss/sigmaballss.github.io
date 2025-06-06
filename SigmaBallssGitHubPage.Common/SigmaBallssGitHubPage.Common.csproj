@@ -11,6 +11,15 @@
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.5" />
       <PackageReference Include="Microsoft.Extensions.Localization" Version="9.0.5" />
       <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="9.0.5" />
+      <PackageReference Include="R3" Version="1.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="JsRuntime\Static\jsRuntimeService.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <None Remove="JsRuntime\Static\jsRuntimeService.js" />
     </ItemGroup>
 
 </Project>
