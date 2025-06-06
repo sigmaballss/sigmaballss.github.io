@@ -85,6 +85,18 @@
         <DependentUpon>HomeResources.cs</DependentUpon>
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </EmbeddedResource>
+      <EmbeddedResource Update="Pages\HomeResources.ru.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>HomeResources.ru-RU.Designer.cs</LastGenOutput>
+        <DependentUpon>HomeResources.cs</DependentUpon>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Pages\HomeResources.fr-FR.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>HomeResources.ru-RU.Designer.cs</LastGenOutput>
+        <DependentUpon>HomeResources.cs</DependentUpon>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>

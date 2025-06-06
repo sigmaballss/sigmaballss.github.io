@@ -21,11 +21,7 @@ public partial class Home : IDisposable
     protected override void OnInitialized()
     {
         _observers = CultureProvider.CurrentCulture
-            .Subscribe(culture =>
-            {
-                Console.WriteLine($"Current Culture: {culture}");
-                StateHasChanged();
-            });
+            .Subscribe(_ => StateHasChanged());
     }
 
     public void Dispose()
