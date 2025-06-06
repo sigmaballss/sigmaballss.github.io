@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SigmaBallssGitHubPage.Blazor",
   "resources": {
-    "hash": "sha256-uWGpNhd5Cr4hprTg49AJd/svNgJ/XDt7YgNZfC62QqI=",
+    "hash": "sha256-UpPzJNjkZ8xHjh8dHs7rZKkUtTDUmmxGHViQQheNIgc=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.e7ipfk1on2.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.jds8s57ddm.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -20,8 +20,8 @@
       "Microsoft.JSInterop.vllxxpyqll.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.y1ydbrr1bj.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
       "R3.8r4ypv2zx7.wasm": "R3.wasm",
-      "SigmaBallssGitHubPage.Blazor.4uo2oy9l7y.wasm": "SigmaBallssGitHubPage.Blazor.wasm",
-      "SigmaBallssGitHubPage.Common.vf5hw5wk5a.wasm": "SigmaBallssGitHubPage.Common.wasm",
+      "SigmaBallssGitHubPage.Blazor.s5hpb68jwl.wasm": "SigmaBallssGitHubPage.Blazor.wasm",
+      "SigmaBallssGitHubPage.Common.akkjkyxxuu.wasm": "SigmaBallssGitHubPage.Common.wasm",
       "System.Collections.Concurrent.cmtpbo8mi6.wasm": "System.Collections.Concurrent.wasm",
       "System.Collections.Immutable.7amsbubruw.wasm": "System.Collections.Immutable.wasm",
       "System.Collections.n2aiuvzm84.wasm": "System.Collections.wasm",
@@ -35,11 +35,11 @@
       "System.Memory.pql7lw5jg2.wasm": "System.Memory.wasm",
       "System.Numerics.Vectors.uoth8hndrb.wasm": "System.Numerics.Vectors.wasm",
       "System.ObjectModel.ky4nhl4qzu.wasm": "System.ObjectModel.wasm",
-      "System.Private.CoreLib.6vx7r5ex38.wasm": "System.Private.CoreLib.wasm",
+      "System.Private.CoreLib.43gj4c3via.wasm": "System.Private.CoreLib.wasm",
       "System.Private.Uri.pjrxfb0a95.wasm": "System.Private.Uri.wasm",
       "System.Runtime.InteropServices.JavaScript.83zwdhfd7p.wasm": "System.Runtime.InteropServices.JavaScript.wasm",
       "System.Runtime.InteropServices.gmhlr8xdyr.wasm": "System.Runtime.InteropServices.wasm",
-      "System.Runtime.2os0yel3aj.wasm": "System.Runtime.wasm",
+      "System.Runtime.k0d0odmsv6.wasm": "System.Runtime.wasm",
       "System.Text.Encodings.Web.n7nth9auq4.wasm": "System.Text.Encodings.Web.wasm",
       "System.Text.Json.xnjom0hzj6.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.k0eu65ve7y.wasm": "System.Text.RegularExpressions.wasm",
@@ -47,8 +47,10 @@
       "System.Threading.Thread.8pli5yaz69.wasm": "System.Threading.Thread.wasm",
       "System.Threading.ThreadPool.3ah1tzz2zs.wasm": "System.Threading.ThreadPool.wasm",
       "System.Threading.8mfa8teweo.wasm": "System.Threading.wasm",
-      "SigmaBallssGitHubPage.Blazor.resources.9uzq7m05xa.wasm": "SigmaBallssGitHubPage.Blazor.resources.wasm",
-      "SigmaBallssGitHubPage.Blazor.resources.lukv1hsexy.wasm": "SigmaBallssGitHubPage.Blazor.resources.wasm",
+      "SigmaBallssGitHubPage.Blazor.resources.5dtteclr0m.wasm": "SigmaBallssGitHubPage.Blazor.resources.wasm",
+      "SigmaBallssGitHubPage.Blazor.resources.4uu7vz4j46.wasm": "SigmaBallssGitHubPage.Blazor.resources.wasm",
+      "SigmaBallssGitHubPage.Blazor.resources.1z3a8hmoex.wasm": "SigmaBallssGitHubPage.Blazor.resources.wasm",
+      "SigmaBallssGitHubPage.Blazor.resources.yha27gh9b4.wasm": "SigmaBallssGitHubPage.Blazor.resources.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.uhsveqo9bs.js": "dotnet.native.js",
       "dotnet.native.swgexbmoy7.wasm": "dotnet.native.wasm",
@@ -68,7 +70,7 @@
       "icudt.oh1zvcfom8.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4="
     },
     "coreAssembly": {
-      "System.Private.CoreLib.6vx7r5ex38.wasm": "sha256-MvaaFl1yDo5E2HDggtAt/nVmnq9SajaYTu2tsa4b3SU=",
+      "System.Private.CoreLib.43gj4c3via.wasm": "sha256-0ANrZ8NKfy3X1pU9mALi3XY5EnBUdTM7NFI2k6mf6BM=",
       "System.Runtime.InteropServices.JavaScript.83zwdhfd7p.wasm": "sha256-pLr/Ys4hCRUIbnJOTabUttdOQTgaKzJPRmT6/do1uGg="
     },
     "assembly": {
@@ -89,8 +91,8 @@
       "Microsoft.JSInterop.vllxxpyqll.wasm": "sha256-o1A7RYF+OAkzNWIEGltWoVZA4DnL7CYcYRsVZmZz9SE=",
       "Microsoft.JSInterop.WebAssembly.y1ydbrr1bj.wasm": "sha256-WuuQXW1+AnPHafZKt7ukqmwRDrGYbEV2LhxNuPl+ybo=",
       "R3.8r4ypv2zx7.wasm": "sha256-lMEA5UFkLQUVu29LVetModHHBrq/3lBUd9NqnE308v8=",
-      "SigmaBallssGitHubPage.Blazor.4uo2oy9l7y.wasm": "sha256-xGVb1bSCBzrvoOp1M1yFQ9q3mR1KInRdXQO4CixX7O8=",
-      "SigmaBallssGitHubPage.Common.vf5hw5wk5a.wasm": "sha256-NXYuExq1DnXRbYW9A3fB1ileayuZUzbHvaG+7P8wgXk=",
+      "SigmaBallssGitHubPage.Blazor.s5hpb68jwl.wasm": "sha256-ICYH6tZDpUYLHwJp/HTmNXML4kO/osmSg+UeAFXTZgw=",
+      "SigmaBallssGitHubPage.Common.akkjkyxxuu.wasm": "sha256-JmVqC6Uo1MbOfpllCWaATeqhYGuFySp/lgfDx5OHcu8=",
       "System.Collections.Concurrent.cmtpbo8mi6.wasm": "sha256-zFKIL+fKyomSoLnnmzBpqJl40xXIB0Te6Nm0ApohxRY=",
       "System.Collections.Immutable.7amsbubruw.wasm": "sha256-MQ0O/eT1aoT0ik7QLIsd6qabe30W7izljksf9y1S6vg=",
       "System.Collections.n2aiuvzm84.wasm": "sha256-gZLHUDZ4LaLts4efR26BSUAlUa4VmZqrf1VvrIpB0cI=",
@@ -106,7 +108,7 @@
       "System.ObjectModel.ky4nhl4qzu.wasm": "sha256-3F2do/uiKUl79LckOMY2ST0I8J7GkuwaoEEEMZ7at80=",
       "System.Private.Uri.pjrxfb0a95.wasm": "sha256-tQSpVVFvBRxFP9HEu8+uwZBeVsE53PxSq/umEXiXzM4=",
       "System.Runtime.InteropServices.gmhlr8xdyr.wasm": "sha256-iEhPTaQJ4jCeoj1L0EhagDRNRmxK7I6h9LVyXL2fxLk=",
-      "System.Runtime.2os0yel3aj.wasm": "sha256-3gS2ajjFCRDvyskC1Q8nfWyKLym1Fiie7itAohpVm7A=",
+      "System.Runtime.k0d0odmsv6.wasm": "sha256-5A0zIKTupthYpcPTD9fjSoqXhbZzVBzBKo+rYWe1VUo=",
       "System.Text.Encodings.Web.n7nth9auq4.wasm": "sha256-PVCrhDn4h1OgqMGUhEs25nlp1YW7mMfPoEgZxltnMoo=",
       "System.Text.Json.xnjom0hzj6.wasm": "sha256-c+AMRKNeFiH1homXooCyVCRo5JSJPhkVAZAx9jydzTE=",
       "System.Text.RegularExpressions.k0eu65ve7y.wasm": "sha256-dAw+dIKra7ljgRE+eVWL5wTVKKXPJi7x/AdHfLLcFDs=",
@@ -117,10 +119,16 @@
     },
     "satelliteResources": {
       "en-US": {
-        "SigmaBallssGitHubPage.Blazor.resources.9uzq7m05xa.wasm": "sha256-8fbwAwUHKvFq596er2qTC8SGYGHxBZrqlEeRgXiSWbY="
+        "SigmaBallssGitHubPage.Blazor.resources.5dtteclr0m.wasm": "sha256-6cfQCg90fUJiy9Zk1SiI1/x1+fRe37GgbjeyUrhMcbI="
+      },
+      "fr-FR": {
+        "SigmaBallssGitHubPage.Blazor.resources.4uu7vz4j46.wasm": "sha256-3IKrStBWUSNDMeG13Cx5AnHqYJ1MD7/e5yxYEBhpwnc="
       },
       "ru-RU": {
-        "SigmaBallssGitHubPage.Blazor.resources.lukv1hsexy.wasm": "sha256-s78Ey88acBaeav/fBsJNkRo9+pEtgX842Vjfn+HDVW0="
+        "SigmaBallssGitHubPage.Blazor.resources.1z3a8hmoex.wasm": "sha256-Y4GD02J4QySiywkKm8DoSwhf+jNZJIkdjSfMqh9/kM8="
+      },
+      "ru": {
+        "SigmaBallssGitHubPage.Blazor.resources.yha27gh9b4.wasm": "sha256-ppjKjiB6271qdoxQpIdIwjcjh5tCvKURl4bgtLSUe/c="
       }
     }
   },
