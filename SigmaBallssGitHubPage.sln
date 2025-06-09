@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigmaBallssGitHubPage.Blazo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigmaBallssGitHubPage.Common", "SigmaBallssGitHubPage.Common\SigmaBallssGitHubPage.Common.csproj", "{AED49F77-C339-4959-9ADF-0E869D14117C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatesBuilder", "TemplatesBuilder\TemplatesBuilder.csproj", "{110DF320-2DE6-4729-AB0F-765F968AFB53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatesBuilder.Content", "TemplatesBuilder.Content\TemplatesBuilder.Content.csproj", "{8C479B66-679D-49BC-89B6-90D183BB3FF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{AED49F77-C339-4959-9ADF-0E869D14117C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AED49F77-C339-4959-9ADF-0E869D14117C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AED49F77-C339-4959-9ADF-0E869D14117C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110DF320-2DE6-4729-AB0F-765F968AFB53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110DF320-2DE6-4729-AB0F-765F968AFB53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110DF320-2DE6-4729-AB0F-765F968AFB53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110DF320-2DE6-4729-AB0F-765F968AFB53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C479B66-679D-49BC-89B6-90D183BB3FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C479B66-679D-49BC-89B6-90D183BB3FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C479B66-679D-49BC-89B6-90D183BB3FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C479B66-679D-49BC-89B6-90D183BB3FF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
