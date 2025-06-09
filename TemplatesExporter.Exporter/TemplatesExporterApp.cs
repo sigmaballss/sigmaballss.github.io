@@ -6,7 +6,8 @@ namespace TemplatesExporter.Exporter;
 
 public class TemplatesExporterApp(
     TemplateExportParams[] exportParams,
-    IServiceProvider serviceProvider)
+    IServiceProvider serviceProvider,
+    TemplateKeySelectorDelegate templateKeySelector)
 {
     public async Task Run()
     {
@@ -17,17 +18,12 @@ public class TemplatesExporterApp(
             var engine = scope.ServiceProvider.GetRequiredService<IRazorLightEngine>();
 
             var resolvedTemplate = await engine.CompileRenderAsync(
-                key: GetTemplateKey(exportParam.Model),
+                key: templateKeySelector(exportParam.Model),
                 exportParam.Model);
 
             await File.WriteAllTextAsync(exportParam.PathToSave, resolvedTemplate, cancellationToken);
         });
 
         Console.WriteLine("Completed successfully");
-    }
-
-    private string GetTemplateKey(object model)
-    {
-        return model.GetType().Name.Replace("Model", "");
     }
 }

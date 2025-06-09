@@ -1,3 +1,8 @@
-﻿@model TemplatesBuilder.Models.LogsModel
+﻿@namespace TemplatesBuilder.Templates
+@inherits RazorLight.TemplatePage<TemplatesBuilder.Models.LogsModel>
 
 Hello @Model.Text
+
+@{
+    await IncludeAsync("Components.Something", new { });
+}

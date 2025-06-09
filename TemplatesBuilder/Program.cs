@@ -9,17 +9,21 @@ var builder = new TemplatesExporterAppBuilder();
 builder.Services.AddRazorLight(() => new RazorLightEngineBuilder()
     .UseEmbeddedResourcesProject(
         typeof(Program).Assembly,
-        rootNamespace: "TemplatesBuilder.Templates")
+        rootNamespace: nameof(TemplatesBuilder))
     .UseMemoryCachingProvider()
     .Build());
 
-builder.AddExport(new TemplateExportParams
-{
-    Model = new LogsModel
+builder
+    .UseTemplateKeySelector(model => string.Join('.',
+        "Templates",
+        TemplatesExporterAppBuilder.DefaultTemplateKeySelector(model)))
+    .AddExport(new TemplateExportParams
     {
-        Text = "Text"
-    },
-    PathToSave = Path.Combine(Directory.GetCurrentDirectory(), "logs.html")
-});
+        Model = new LogsModel
+        {
+            Text = "Text"
+        },
+        PathToSave = Path.Combine(Directory.GetCurrentDirectory(), "logs.html")
+    });
 
 await builder.Build().Run();

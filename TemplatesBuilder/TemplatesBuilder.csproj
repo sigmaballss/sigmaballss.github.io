@@ -23,6 +23,7 @@
 
     <ItemGroup>
       <EmbeddedResource Include="Templates\**" />
+      <EmbeddedResource Include="Components\**" />
     </ItemGroup>
 
 </Project>
