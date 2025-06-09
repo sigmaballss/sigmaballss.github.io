@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using RazorLight;
-using TemplatesBuilder.Structs;
+using TemplatesExporter.Exporter.Structs;
 
-namespace TemplatesBuilder.Builder;
+namespace TemplatesExporter.Exporter;
 
 public class TemplatesExporterApp(
     TemplateExportParams[] exportParams,

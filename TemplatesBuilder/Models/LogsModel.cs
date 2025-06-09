@@ -1,4 +1,4 @@
-﻿namespace TemplatesBuilder.Content.Models;
+﻿namespace TemplatesBuilder.Models;
 
 public record LogsModel
 {

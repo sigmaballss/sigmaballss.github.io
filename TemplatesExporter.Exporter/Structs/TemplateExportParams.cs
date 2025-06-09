@@ -1,4 +1,4 @@
-﻿namespace TemplatesBuilder.Structs;
+﻿namespace TemplatesExporter.Exporter.Structs;
 
 public struct TemplateExportParams
 {
